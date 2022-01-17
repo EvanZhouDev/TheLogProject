@@ -1,0 +1,65 @@
+.title {
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	font-size: 50px;
+	width: 60%;
+}
+
+p {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+}
+
+.importantInformation {
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	width: 90%;
+	padding-left: 10px;
+	margin-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: 10px solid #34c8b6;
+}
+
+.numberInput {
+	border: 2px solid lightgray;
+    font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	border-radius: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.submitButton {
+	background-color: white;
+	border: 2px solid lightgray;
+	border-radius: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: gray;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	transition: 500ms;
+	display: table;
+	margin: 0 auto;
+}
+
+.submitButton:hover {
+	border: 2px solid gray;
+}
+
+.submitButton:active {
+	border-radius: 5px;
+}
+
+.calculator {
+	background-color: gainsboro;
+    display: table;
+	margin: 0 auto;
+}
+
+.inputGroup {
+    display: table;
+	margin: 0 auto;
+}
