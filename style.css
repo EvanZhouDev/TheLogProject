@@ -46,11 +46,11 @@ iframe {
 	position: absolute;
 	top: 11%;
 	left: 4%;
-	width: 100%;
+	width: 90%;
 	height: 85%;
-    overflow-y: scroll;
-    height: 76%;
-    border-radius: 1vw;
+	overflow-y: scroll;
+	height: 76%;
+	border-radius: 1vw;
 }
 
 .sideBarDivLesson {
@@ -58,6 +58,7 @@ iframe {
 	display: flex;
 	align-items: center;
 	width: 100%;
+	text-align: left;
 	height: 10%;
 	border: none;
 	background: none;
@@ -91,47 +92,77 @@ iframe {
 	position: absolute;
 	left: 25%;
 	font-family: "Roboto", sans-serif;
-	font-size: 25px;
+	font-size: 23px;
 }
 
 .sideBarButtonHolder {
-    width: 90%;
-    left: 8%;
-    height: 10%;
-    position: absolute;
-    bottom: 0px;
+	width: 90%;
+	left: 5%;
+	height: 10%;
+	position: absolute;
+	bottom: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .sideBarButton {
-    width: 40%;
-    height: 90%;
-    /* border: none;
-    background: none; */
-    font-family: "Roboto", sans-serif;
+	width: 44%;
+	height: 90%;
+	margin-left: 2%;
+	margin-right: 2%;
+	font-family: "Roboto", sans-serif;
 	font-size: 12px;
-    background: none;
-    color: gray;
-    border: 3px solid lightgray;
-    border-radius: 20px;
-    transition: 500ms;
+	background: none;
+	color: gray;
+	border: 3px solid lightgray;
+	border-radius: 20px;
+	transition: 500ms;
 }
 
 .sideBarButton:hover {
-    border: 3px solid gray;
+	border: 3px solid gray;
 }
 .sideBarButton:active {
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
-.markDone:hover{
-    border: 3px solid #34c8b6;
+.markDone:hover {
+	border: 3px solid #34c8b6;
 }
 
-.markDone:active{
-    background-color: #34c8b6;
-    color: white;
+.markDone:active {
+	background-color: #34c8b6;
+	color: white;
 }
 
 .leftRight {
-    width: 25%;
+	width: 25%;
+}
+
+.customTooltip * {
+	color: #4a4a4a;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+}
+
+.helpButton {
+	position: absolute;
+	background: none;
+	color: gray;
+	border: 3px solid lightgray;
+	height: 3vw;
+	width: 3vw;
+	font-size: 30px;
+	border-radius: 100%;
+	right: 2%;
+	top: 3%;
+	line-height: 1vw;
+	transition: 500ms;
+}
+.helpButton:hover {
+	border: 3px solid gray;
+}
+.helpButton:active {
+	border-radius: 10px;
 }

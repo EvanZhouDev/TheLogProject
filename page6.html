@@ -12,11 +12,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="page.css" />
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-		<script
-			id="MathJax-script"
-			async
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-		></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -25,6 +20,36 @@
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
-		<p>When \(ax^2 \ne 2\)</p>
+
+		<h1 class="title">Applying the Change of Base Formula</h1>
+		<p>
+			You might realize that many logarithms that we evaluated required a base value. For example, \(log_2 4\) has a base of 2. However, on many scientific/graphing calculators, there are no inputs for a base. There is simply a \(\log\) button, and a \(\ln\) button (we'll get to natural logarithms in the next lesson). So, what do we do to get bases for our logarithms? We have to use the Change of Base Formula. The HMH textbook defines it as so:
+		</p>
+		<p class="importantInformation">
+			For \(a > 0\) and \(a \ne 1\) and any base \(b\) such that \(b>0\) and \(b \ne 1\), <br> \(\log_b x = {\log_a x \over \log_a b}\)
+		</p>
+		<p>
+			As you can see, in order to turn a logarithm with a base into two logarithms with <i>any</i> base, i.e.,the variable \(a\) can be anything. Let's see this in action. Using the logarithm with a base, \(log_{134} 763\), we'll apply the Change of Base Formula. We first figure out that our \(b\) value is 134&mdash;our base is 134. Next, we see that \(x\) is 763&mdash;our argument is 763. Format the variables like so: \({\log_a 763 \over \log_a 134}\). Notice how we explicitly left the variable \(a\) blank. It can be any thing, as long as it follows these rules: \(a > 0\) and \(a \ne 1\). Let's try evaluating the original logarithm first. Using the calculator in the first lesson, we get this: \(log_{134} 763 &approx; 1.355\). Now, let's assume that \(a = 10\), and evaluate the expression after we converted it: \({\log_{10} 763 \over \log_{10} 134} &approx; 1.355\) as well! In order to show that \(a\) can be something else, let's give it the value of 102. Does it work? \({\log_{102} 763 \over \log_{102} 134} &approx; 1.355\) Indeed it does! We can also use the property in reverse. When we see a quotient of two logarithms of a common base, we can turn them into a single logarithm, with the argument the top logarithm, and the base the lower logarithm.
+		</p>
+
+		<h1 class="title">Change of Base Examples</h1>
+		<p>Represent this expression with only base 10 logarithms:</p>
+		<p class="importantInformation">\(\log_2 12\)</p>
+		<p>
+			Directly applying the Change of Base formula is enough in this situation. Because we need a final logarithm of base 10, we can make the \(a\) value in the original defition 10. We will get something like this: \({\log_{10} 12 \over \log_{10} 2}\), or simply \({\log 12 \over \log 2}\)
+		</p>
+		<p class="importantInformation">\(log_4 12 + log_4 9\)</p>
+		<p>
+			In order to achieve the simplest form, we first have to multiply the two values with the product property. We get \(log_4 108\). Then, with the Change of Base formula, (and again, making \(a\) 10) we get \({\log_{10} 108 \over \log_{10} 4}\), or \({\log 108 \over \log 4}\)
+		</p>
+		<p>Are the two expressions equivalent? Explain.</p>
+		<p class="importantInformation">\({\log_{2} 97 \over \log_{2} 3}\) and \({\log_{13} 97 \over \log_{13} 3}\)</p>
+		<p>
+			These two values would be completely equal! If we reverse the Change of Base formula (changing a quotient of two logarithms with identical bases into one logarithm with a unique base), we can turn \({\log_{2} 97 \over \log_{2} 3}\) back into \(\log_3 97\). From that, we can use the same formula to get \({\log_{13} 97 \over \log_{13} 3}\). Applying the transitive property, \({\log_{2} 97 \over \log_{2} 3}\) and \({\log_{13} 97 \over \log_{13} 3}\) are completely equal!
+		</p>
+		<script
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		></script>
 	</body>
 </html>

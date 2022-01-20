@@ -12,11 +12,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="page.css" />
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-		<script
-			id="MathJax-script"
-			async
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-		></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -25,6 +20,42 @@
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
-		<p>When \(ax^2 \ne 2\)</p>
+
+		<h1 class="title">Inverse Properties of Logarithms and Exponents</h1>
+		<p>
+			This property is slightly different from the previous properties that were explained. Instead of the usual logarithm manipulation, the Inverse Property of Logarithms and Exponents (as its name states!) is a way to cancel out logarithms and exponent using inverses. Let's see what HMH has to say about this property.
+		</p>
+		<p class="importantInformation">
+			For any base \(b\) such that \(b>0\) and \(b \ne 1\),<br>\(\log_b b^{x} = x\), and \(b^{\log_{b} x} = x\)
+		</p>
+		<p>
+			As you can see, the definition of this property is quite simple. When you recognize any of these cases when you are problem-solving, you should know that you can cancel out a part of the expression. 
+			"Canceling out" is a fancy way to say remove two inverses. For example, in \(1 - 1 + 2\), we can cancel out the ones (as they invert each other), and just leave a 2. Similarly with exponents, in \(\log_5 5^2\), the logarithm with base 5 and the 5 itself cancel, leaving just the exponent, 2. Something to pay attention to is that when you can cancel, there are usually two of the same numbers. When you see this happen along with logarithms and exponents, keep a sharp eye out for the ability to apply the Inverse Properties of Logarithms and Exponents!
+		</p>
+
+		<h1 class="title">Inverse Property Examples</h1>
+		<p>Simplify this expression:</p>
+		<p class="importantInformation">\(\log 10^{x}\)</p>
+		<p>
+			You might not think that the inverse property is at all applicable here; it appears that there are no two same terms. However, remember that the given expression is actually equivalent to this: \(\log_{10} 10^{x}\). Now, we see that the two 10's may cancel out, to leave us with just the answer: \(x\).
+		</p>
+		<p class="importantInformation">\(6^{log_6 7}\)</p>
+		<p>
+			This one is slightly more obvious, as the 6 to the power of logarithm of base 6 cancel out, leaving simply 7. The answer is \(7\).
+		</p>
+		<p>Evaluate this expression using the Inverse Property:</p>
+		<p class="importantInformation">\(log_4 256\)</p>
+		<p>
+			We may notice that the latter 256 is actually equivalent to \(4 * 4 * 4 * 4\), or \(4^4\). Writing this into the expression, we get \(log_4 4^4\). What do we notice? We see that the logarithm's base (4) and the four itself cancel, leaving the exponent behind. We get that \(log_4 4^4 = 4\). The answer is \(4\).
+		</p>
+		<p>Solve for \(x\):</p>
+		<p class="importantInformation">\(\log_8 8^x = log 100\)</p>
+		<p>
+			This is a simple equation, where we have to solve for \(x\). First, we notice that on the left side, the logarithm of base 8 and 8 cancel, leaving \(x\). Now, we solve the logarithm on the left hand side, getting 2. (\(log 100 = 2\)) Finally, we get \(x = 2\), meaning that the final answer is \(2\).
+		</p>
+		<script
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		></script>
 	</body>
 </html>

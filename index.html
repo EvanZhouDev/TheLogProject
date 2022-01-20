@@ -16,34 +16,100 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			rel="stylesheet"
+			href="https://unpkg.com/intro.js/minified/introjs.min.css"
+		/>
+		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
-		
+
 		<!--[if lt IE 7]>
 			<p class="browsehappy">
 				You are using an <strong>outdated</strong> browser. Please
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
-		
+
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
-        <div id="iframes">
-            <!-- This area is dynamically populated -->
-        </div>
+		<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+		<div id="iframes">
+			<!-- This area is dynamically populated -->
+		</div>
 
-		<div class="sideBar">
+		<div id="tutorialSideBar" class="sideBar">
 			<div class="sideBarTitle">Menu</div>
-            <div class="sideBarDivSections" id="menu">
-                <!-- This area is dynamically populated -->
-            </div>
-			<div class="sideBarButtonHolder">
-				<button class="sideBarButton leftRight" onclick="prevPage()">Previous Lesson</button>
-				<button id="markDoneButton" class="sideBarButton markDone" onclick="markDone()">Mark as Learned</button>
-				<button class="sideBarButton leftRight" onclick="nextPage()">Next Lesson</button>
+			<button onclick="userGuide()" id="tutorialHelpButton" class="helpButton">?</button>
+			<div class="sideBarDivSections" id="menu">
+				<!-- This area is dynamically populated -->
+			</div>
+			<div id="tutorialButtons" class="sideBarButtonHolder">
+				<button class="sideBarButton leftRight" onclick="prevPage()">
+					Previous Lesson
+				</button>
+				<button
+					id="markDoneButton"
+					class="sideBarButton markDone"
+					onclick="markDone()"
+				>
+					Mark as Learned
+				</button>
+				<button class="sideBarButton leftRight" onclick="nextPage()">
+					Next Lesson
+				</button>
 			</div>
 		</div>
 		<script src="index.js" async defer></script>
+		<script async defer>
+			let userGuide = () => {
+				introJs()
+					.setOptions({
+						steps: [
+							{
+								intro: "Welcome to The Log Project",
+							},
+							{
+								element: document.getElementById("tutorialSideBar"),
+								intro: "This is where you will navigate.",
+							},
+							{
+								element: document.getElementById("menu"),
+								intro:
+									"Click on any of these to change your lesson. Give it a try!",
+							},
+							{
+								intro: "Each of the lessons will have interactive elements such as calculators and quizzes. Practice logarithms with The Log Project!",
+							},
+							{
+								element: document.getElementById("tutorialButtons"),
+								intro:
+									"As an alternative, use these buttons to navigate the page.",
+							},
+							{
+								element: document.getElementById("markDoneButton"),
+								intro:
+									"Use this button to mark your lesson as done. Finished lessons will have a green circle next to them. Click it again to mark as unlearned.",
+							},
+							{
+								element: document.getElementById("tutorialHelpButton"),
+								intro:
+									"If you need a reminder on how to use the website, press this button to retrigger this user guide.",
+							},
+							{
+								intro: "You are ready to learn! Good luck!",
+							},
+						],
+						tooltipClass: "customTooltip",
+					})
+					.start();
+			};
+			let userVisited = localStorage.getItem("theLogProjectVisited")
+
+			if (userVisited == undefined) {
+				localStorage.setItem("theLogProjectVisited", "true")
+				userGuide();
+			}
+		</script>
 	</body>
 </html>
