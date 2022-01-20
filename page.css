@@ -63,3 +63,36 @@ p {
     display: table;
 	margin: 0 auto;
 }
+
+.quiz {
+	position: absolute;
+	background-color: gainsboro;
+	border-radius: 40px;
+	padding-left: 2%;
+	height: 50%;
+	width: 80%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.quizButton {
+	border: none;
+	padding: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-color: white;
+	border: 5px solid lightgray;
+	color: gray;
+	border-radius: 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	transition: 500ms;
+}
+
+.quizButton:hover{
+	border: 5px solid gray;
+}
+
+.quizButton:active {
+	border-radius: 10px;
+}
