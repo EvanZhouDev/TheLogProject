@@ -58,7 +58,7 @@ let pages = {
 	},
 };
 
-for (let [i, x] of Object.entries(pages)) {
+for (let [_i, x] of Object.entries(pages)) {
 	if (x.type === "page") {
 		pageNum++
 	}
@@ -97,7 +97,8 @@ for (let [i, x] of Object.entries(pages)) {
 	}
 }
 
-let shownPage = "";
+let shownPage = "page1"
+shownPage = localStorage.getItem("theLogProjectCurrent") == undefined ? shownPage : JSON.parse(localStorage.getItem("theLogProjectCurrent"));
 let shownPageNum = 1;
 let updatePage = (page) => {
 
@@ -132,6 +133,7 @@ let updatePage = (page) => {
 	}
 
 	localStorage.setItem("theLogProjectProgress", JSON.stringify(pages))
+	localStorage.setItem("theLogProjectCurrent", JSON.stringify(shownPage))
 };
 
 let prevPage = () => {
@@ -164,4 +166,4 @@ let markDone = () => {
 	updatePage(shownPage)
 }
 
-updatePage("page3"); // Do any necessary refreshing
+updatePage(shownPage); // Do any necessary refreshing
