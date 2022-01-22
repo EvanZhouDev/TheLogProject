@@ -23,36 +23,111 @@
 
 		<h1 class="title">Inverse Properties of Logarithms and Exponents</h1>
 		<p>
-			This property is slightly different from the previous properties that were explained. Instead of the usual logarithm manipulation, the Inverse Property of Logarithms and Exponents (as its name states!) is a way to cancel out logarithms and exponent using inverses. Let's see what HMH has to say about this property.
+			This property is slightly different from the previous properties that were
+			explained. Instead of the usual logarithm manipulation, the Inverse
+			Property of Logarithms and Exponents (as its name states!) is a way to
+			cancel out logarithms and exponent using inverses. Let's see what HMH has
+			to say about this property.
 		</p>
 		<p class="importantInformation">
-			For any base \(b\) such that \(b>0\) and \(b \ne 1\),<br>\(\log_b b^{x} = x\), and \(b^{\log_{b} x} = x\)
+			For any base \(b\) such that \(b>0\) and \(b \ne 1\),<br />\(\log_b b^{x}
+			= x\), and \(b^{\log_{b} x} = x\)
 		</p>
 		<p>
-			As you can see, the definition of this property is quite simple. When you recognize any of these cases when you are problem-solving, you should know that you can cancel out a part of the expression. 
-			"Canceling out" is a fancy way to say remove two inverses. For example, in \(1 - 1 + 2\), we can cancel out the ones (as they invert each other), and just leave a 2. Similarly with exponents, in \(\log_5 5^2\), the logarithm with base 5 and the 5 itself cancel, leaving just the exponent, 2. Something to pay attention to is that when you can cancel, there are usually two of the same numbers. When you see this happen along with logarithms and exponents, keep a sharp eye out for the ability to apply the Inverse Properties of Logarithms and Exponents!
+			As you can see, the definition of this property is quite simple. When you
+			recognize any of these cases when you are problem-solving, you should know
+			that you can cancel out a part of the expression. "Canceling out" is a
+			fancy way to say remove two inverses. For example, in \(1 - 1 + 2\), we
+			can cancel out the ones (as they invert each other), and just leave a 2.
+			Similarly with exponents, in \(\log_5 5^2\), the logarithm with base 5 and
+			the 5 itself cancel, leaving just the exponent, 2. Something to pay
+			attention to is that when you can cancel, there are usually two of the
+			same numbers. When you see this happen along with logarithms and
+			exponents, keep a sharp eye out for the ability to apply the Inverse
+			Properties of Logarithms and Exponents!
 		</p>
 
 		<h1 class="title">Inverse Property Examples</h1>
 		<p>Simplify this expression:</p>
 		<p class="importantInformation">\(\log 10^{x}\)</p>
 		<p>
-			You might not think that the inverse property is at all applicable here; it appears that there are no two same terms. However, remember that the given expression is equivalent to this: \(\log_{10} 10^{x}\). Now, we see that the two 10's may cancel out, to leave us with just the answer: \(x\).
+			You might not think that the inverse property is at all applicable here;
+			it appears that there are no two same terms. However, remember that the
+			given expression is equivalent to this: \(\log_{10} 10^{x}\). Now, we see
+			that the two 10's may cancel out, to leave us with just the answer: \(x\).
 		</p>
 		<p class="importantInformation">\(6^{log_6 7}\)</p>
 		<p>
-			This one is slightly more obvious, as the 6 to the power of the logarithm of base 6 cancel out, leaving simply 7. The answer is \(7\).
+			This one is slightly more obvious, as the 6 to the power of the logarithm
+			of base 6 cancel out, leaving simply 7. The answer is \(7\).
 		</p>
 		<p>Evaluate this expression using the Inverse Property:</p>
 		<p class="importantInformation">\(log_4 256\)</p>
 		<p>
-			We may notice that the latter 256 is equivalent to \(4 * 4 * 4 * 4\), or \(4^4\). Writing this into the expression, we get \(log_4 4^4\). What do we notice? We see that the logarithm's base (4) and the four itself cancel, leaving the exponent behind. We get that \(log_4 4^4 = 4\). The answer is \(4\).
+			We may notice that the latter 256 is equivalent to \(4 * 4 * 4 * 4\), or
+			\(4^4\). Writing this into the expression, we get \(log_4 4^4\). What do
+			we notice? We see that the logarithm's base (4) and the four itself
+			cancel, leaving the exponent behind. We get that \(log_4 4^4 = 4\). The
+			answer is \(4\).
 		</p>
 		<p>Solve for \(x\):</p>
 		<p class="importantInformation">\(\log_8 8^x = log 100\)</p>
 		<p>
-			This is a simple equation, where we have to solve for \(x\). First, we notice that on the left side, the logarithm of base 8 and 8 cancels, leaving \(x\). Now, we solve the logarithm on the left-hand side, getting 2. (\(log 100 = 2\)) Finally, we get \(x = 2\), meaning that the final answer is \(2\).
+			This is a simple equation, where we have to solve for \(x\). First, we
+			notice that on the left side, the logarithm of base 8 and 8 cancels,
+			leaving \(x\). Now, we solve the logarithm on the left-hand side, getting
+			2. (\(log 100 = 2\)) Finally, we get \(x = 2\), meaning that the final
+			answer is \(2\).
 		</p>
+		<div class="centered">
+			<div class="quiz">
+				<h1 class="title">Quiz</h1>
+				<p>Evaluate this logarithm: \(\log_a a^{14}\).</p>
+				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
+					\(14\)
+				</button>
+				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
+					\(a\)
+				</button>
+				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+					\(14a\)
+				</button>
+				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
+					\(1\)
+				</button>
+				<p id="feedback">Choose an answer to see your feedback.</p>
+			</div>
+		</div>
+		<script>
+			let correctAnswer = 0;
+			let feedback = [
+				"That is correct!",
+				"Not quite. Try checking your work.",
+				"Not quite. Try checking your work.",
+				"Not quite. Try checking your work.",
+			];
+			let feedbackDiv = document.getElementById("feedback");
+			let buttons = {
+				button0: document.getElementById("button0"),
+				button1: document.getElementById("button1"),
+				button2: document.getElementById("button2"),
+				button3: document.getElementById("button3"),
+			};
+			evaluateAnswer = (num) => {
+				buttons.button0.style.borderColor = "lightgray";
+				buttons.button1.style.borderColor = "lightgray";
+				buttons.button2.style.borderColor = "lightgray";
+				buttons.button3.style.borderColor = "lightgray";
+				feedbackDiv.innerHTML = feedback[num];
+				if (num === correctAnswer) {
+					buttons["button" + num].style.borderColor = "#34c8b6";
+					console.log("correct!");
+				} else {
+					buttons["button" + num].style.borderColor = "#ea3323";
+					console.log("incorrect!");
+				}
+			};
+		</script>
 		<script
 			id="MathJax-script"
 			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"

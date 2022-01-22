@@ -35,13 +35,14 @@
 			This might seem slightly confusing. However, we can break this down.
 			Imagine that we have a logarithmic equation like this \(\log_2 15\). The
 			sum of the logarithms of 15's factors is equal to \(log_2 15\). First,
-			find two factors: We will be choosing 5 and 3, but 1 and 15 work equally as
-			fine. Now, we will add the logarithm of both of these factors, with the
+			find two factors: We will be choosing 5 and 3, but 1 and 15 work equally
+			as fine. Now, we will add the logarithm of both of these factors, with the
 			same base as the original logarithm, 2. It should look something as
 			follows: \(\log_2 5 + log_2 3\).<br />Referring back to the definition,
 			adding these two should, in theory, equal \(\log_2 15\). Does this work?
 			Let's plug it into a calculator to check. \(log_2 15 &asymp; 3.907\), and
-			\(\log_2 5 + log_2 3 &asymp; 3.907\) as well! Similarly, we can turn \(\log_2 5 + log_2 3\) back into \(\log_2 15\).
+			\(\log_2 5 + log_2 3 &asymp; 3.907\) as well! Similarly, we can turn
+			\(\log_2 5 + log_2 3\) back into \(\log_2 15\).
 		</p>
 		<br />
 		<p>
@@ -57,55 +58,75 @@
 		<p>Simplify this equation:</p>
 		<p class="importantInformation">\(log_{216} 12 + log_{216} 18\)</p>
 		<p>
-			From what we've learned, the logarithm of a product is equal to the sum of the logarithm of its factors. We converted one logarithm to multiple. However, let's undo this process. The two factors, instead, are 12 and 18. We can multiply them to get this: \(log_{216}(12*18)\), or simplified: \(log_{216} 216\). We can tell that this is, in fact, 1!
+			From what we've learned, the logarithm of a product is equal to the sum of
+			the logarithm of its factors. We converted one logarithm to multiple.
+			However, let's undo this process. The two factors, instead, are 12 and 18.
+			We can multiply them to get this: \(log_{216}(12*18)\), or simplified:
+			\(log_{216} 216\). We can tell that this is, in fact, 1!
 		</p>
 		<p>Represent the following equations in <i>1</i> logarithm:</p>
 		<p class="importantInformation">\(log 3 + log 5\)</p>
-		<p>This is very similar to what we had in the previous example. Let's multiply the 3 and 5 together: \(log (3 * 5)\). Simplify: \(log 15\). And there we have it!</p>
+		<p>
+			This is very similar to what we had in the previous example. Let's
+			multiply the 3 and 5 together: \(log (3 * 5)\). Simplify: \(log 15\). And
+			there we have it!
+		</p>
 		<p class="importantInformation">\(log 2 + log 4 + log 6\)</p>
-		<p>This looks slightly different, doesn't it? However, let's do this part by part. First, we will simplify the logarithm of 2 and 4. We follow the steps above to get \(log 8 + log 6\). Next, we do the same thing with the 8 and the 6. The answer is \(log 48\).</p>
+		<p>
+			This looks slightly different, doesn't it? However, let's do this part by
+			part. First, we will simplify the logarithm of 2 and 4. We follow the
+			steps above to get \(log 8 + log 6\). Next, we do the same thing with the
+			8 and the 6. The answer is \(log 48\).
+		</p>
 		<div class="centered">
 			<div class="quiz">
 				<h1 class="title">Quiz</h1>
 				<p>Evaluate the logarithmic expression: \(log_6 3 + log_6 72\).</p>
-				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">1</button>
-				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">2</button>
-				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">3</button>
-				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">4</button>
+				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
+					1
+				</button>
+				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
+					2
+				</button>
+				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+					3
+				</button>
+				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
+					4
+				</button>
 				<p id="feedback">Choose an answer to see your feedback.</p>
 			</div>
-			<script>
-				let correctAnswer = 2;
-				let feedback = [
-					"Not quite. Try checking your work.",
-					"Not quite. Try checking your work.",
-					"That is correct!",
-					"Not quite. Try checking your work."
-				]
-				let feedbackDiv = document.getElementById("feedback")
-				let buttons = {
-					button0: document.getElementById("button0"),
-					button1: document.getElementById("button1"),
-					button2: document.getElementById("button2"),
-					button3: document.getElementById("button3"),
-				}
-				evaluateAnswer = (num) => {
-					buttons.button0.style.borderColor = "lightgray"
-					buttons.button1.style.borderColor = "lightgray"
-					buttons.button2.style.borderColor = "lightgray"
-					buttons.button3.style.borderColor = "lightgray"
-					feedbackDiv.innerHTML = feedback[num]
-					if (num === correctAnswer) {
-						buttons["button" + num].style.borderColor = "#34c8b6"
-						console.log("correct!")
-					}else{
-						buttons["button" + num].style.borderColor = "#ea3323"
-						console.log("incorrect!")
-					}
-
-				}
-			</script>
 		</div>
+		<script>
+			let correctAnswer = 2;
+			let feedback = [
+				"Not quite. Try checking your work.",
+				"Not quite. Try checking your work.",
+				"That is correct!",
+				"Not quite. Try checking your work.",
+			];
+			let feedbackDiv = document.getElementById("feedback");
+			let buttons = {
+				button0: document.getElementById("button0"),
+				button1: document.getElementById("button1"),
+				button2: document.getElementById("button2"),
+				button3: document.getElementById("button3"),
+			};
+			evaluateAnswer = (num) => {
+				buttons.button0.style.borderColor = "lightgray";
+				buttons.button1.style.borderColor = "lightgray";
+				buttons.button2.style.borderColor = "lightgray";
+				buttons.button3.style.borderColor = "lightgray";
+				feedbackDiv.innerHTML = feedback[num];
+				if (num === correctAnswer) {
+					buttons["button" + num].style.borderColor = "#34c8b6";
+					console.log("correct!");
+				} else {
+					buttons["button" + num].style.borderColor = "#ea3323";
+					console.log("incorrect!");
+				}
+			};
+		</script>
 		<script
 			id="MathJax-script"
 			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"

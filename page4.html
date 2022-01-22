@@ -63,7 +63,10 @@
 		</p>
 		<p class="importantInformation">\(\log12^{5}+log3^{5}\)</p>
 		<p>
-			Let's take this one step by step. First, use the Power Property to extract the fives. You will get \(5\log12 + 5\log3\). Now, to simplify further, we factor 5 out: \(5(\log12 + \log3)\). Next, add the logarithms: \(5(\log36)\). Finally, we get our answer: \(5\log36\).
+			Let's take this one step by step. First, use the Power Property to extract
+			the fives. You will get \(5\log12 + 5\log3\). Now, to simplify further, we
+			factor 5 out: \(5(\log12 + \log3)\). Next, add the logarithms:
+			\(5(\log36)\). Finally, we get our answer: \(5\log36\).
 		</p>
 		<p>Evaluate this expression:</p>
 		<p class="importantInformation">\(\log10^{100}\)</p>
@@ -75,6 +78,54 @@
 			Note that this can also be done with the inverse property, taught in the
 			next lesson.
 		</p>
+		<div class="centered"></div>
+		<div class="quiz">
+			<h1 class="title">Quiz</h1>
+			<p>What is this equivalent to?: \(\log_8 31^4\).</p>
+			<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
+				\(31\log_8 4\)
+			</button>
+			<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
+				\(8\log_31 4\)
+			</button>
+			<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+				\(4\log_8 31\)
+			</button>
+			<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
+				\(31\log_8 4\)
+			</button>
+			<p id="feedback">Choose an answer to see your feedback.</p>
+		</div>
+		<script>
+			let correctAnswer = 2;
+			let feedback = [
+				"Not quite. Try checking your work.",
+				"Not quite. Try checking your work.",
+				"That is correct!",
+				"Not quite. Try checking your work.",
+			];
+			let feedbackDiv = document.getElementById("feedback");
+			let buttons = {
+				button0: document.getElementById("button0"),
+				button1: document.getElementById("button1"),
+				button2: document.getElementById("button2"),
+				button3: document.getElementById("button3"),
+			};
+			evaluateAnswer = (num) => {
+				buttons.button0.style.borderColor = "lightgray";
+				buttons.button1.style.borderColor = "lightgray";
+				buttons.button2.style.borderColor = "lightgray";
+				buttons.button3.style.borderColor = "lightgray";
+				feedbackDiv.innerHTML = feedback[num];
+				if (num === correctAnswer) {
+					buttons["button" + num].style.borderColor = "#34c8b6";
+					console.log("correct!");
+				} else {
+					buttons["button" + num].style.borderColor = "#ea3323";
+					console.log("incorrect!");
+				}
+			};
+		</script>
 		<script
 			id="MathJax-script"
 			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"

@@ -23,19 +23,27 @@
 
 		<h1 class="title">Quotient Property of Logarithms</h1>
 		<p>
-			This is very similar to the previous property: the product property of logarithms. If addition of logarithms results in multiplication, then we can expect the subtraction of logarithms to result in division! Let's take a detailed look at this property, first at how HMH defines it:
+			This is very similar to the previous property: the product property of
+			logarithms. If addition of logarithms results in multiplication, then we
+			can expect the subtraction of logarithms to result in division! Let's take
+			a detailed look at this property, first at how HMH defines it:
 		</p>
 		<p class="importantInformation">
-			The logarithm of a quotient is the logarithm of the dividend minus the logarithm of the divisor
+			The logarithm of a quotient is the logarithm of the dividend minus the
+			logarithm of the divisor
 		</p>
 		<p>
-			Let's start by working through an example together: Simplifying \(\log{12 \over 5}\). In this case, the \({12 \over 5}\) is the quotient, 12 the dividend, 5 the divisor. The logarithm of the dividend is \(\log12\). The logarithm of the divisor is \(\log5\). The result when we subtract the two (\(\log12 - \log5\)), it should be equivalent to \(\log{12 \over 5}\). When we evaluate \(\log{12 \over 5}\), we get approximately 0.380. \(\log12 - \log5\) gives us 0.380 as well! Similarly, we can turn \(\log12 - \log5\) into \(\log{12 \over 5}\) with the same process.
+			Let's start by working through an example together: Simplifying \(\log{12
+			\over 5}\). In this case, the \({12 \over 5}\) is the quotient, 12 the
+			dividend, 5 the divisor. The logarithm of the dividend is \(\log12\). The
+			logarithm of the divisor is \(\log5\). The result when we subtract the two
+			(\(\log12 - \log5\)), it should be equivalent to \(\log{12 \over 5}\).
+			When we evaluate \(\log{12 \over 5}\), we get approximately 0.380.
+			\(\log12 - \log5\) gives us 0.380 as well! Similarly, we can turn \(\log12
+			- \log5\) into \(\log{12 \over 5}\) with the same process.
 		</p>
-		<br>
-		<p>
-			Abstracting this, We get the following
-			equation in algebra.
-		</p>
+		<br />
+		<p>Abstracting this, We get the following equation in algebra.</p>
 		<p class="importantInformation">
 			For any positive numbers \(m\), \(n\), and \(b\) (\(b \ne 1\)), \(\log_b
 			{m \over n} = log_b m-log_b n\)
@@ -45,15 +53,77 @@
 		<p>Simplify each this equation:</p>
 		<p class="importantInformation">\(log_{2} 12 - log_{2} 18\)</p>
 		<p>
-			From the properties we learned, the logarithm of the dividend subtracted by the logarithm of the divisor (which is what we have now!) is equal to the logarithm of the quotient. Dividing the dividend by the divisor, we get \({12 \over 18} = {2 \over 3}\). Therefore, \(log_{2} 12 - log_{2} 18 = log_{2} {2 \over 3}\)
+			From the properties we learned, the logarithm of the dividend subtracted
+			by the logarithm of the divisor (which is what we have now!) is equal to
+			the logarithm of the quotient. Dividing the dividend by the divisor, we
+			get \({12 \over 18} = {2 \over 3}\). Therefore, \(log_{2} 12 - log_{2} 18
+			= log_{2} {2 \over 3}\)
 		</p>
 		<p>Represent the following equations in <i>1</i> logarithm:</p>
 		<p class="importantInformation">\(\log3 - \log5\)</p>
-		<p>This is very similar to what we had in the previous example. Let's divide the 3 and 5, and take the logarithm of that: \(\log{3 \over 5}\). There we have our answer.
+		<p>
+			This is very similar to what we had in the previous example. Let's divide
+			the 3 and 5, and take the logarithm of that: \(\log{3 \over 5}\). There we
+			have our answer.
+		</p>
 		<p class="importantInformation">\(\log3 + \log6 - \log9\)</p>
 		<p>
-			This requires us to combine the knowledge from the previous lesson! Let's start with the \(\log3 + log6\) this should get us \(\log3*6\), or \(\log18\). Now, we have this: \(\log18 - \log9\). Using the quotient property, we get that this is equivalent to \(\log18/9\), or \(\log2\). We can verify that this works using a graphing calculator!
+			This requires us to combine the knowledge from the previous lesson! Let's
+			start with the \(\log3 + log6\) this should get us \(\log3*6\), or
+			\(\log18\). Now, we have this: \(\log18 - \log9\). Using the quotient
+			property, we get that this is equivalent to \(\log18/9\), or \(\log2\). We
+			can verify that this works using a graphing calculator!
 		</p>
+
+		<div class="centered">
+			<div class="quiz">
+				<h1 class="title">Quiz</h1>
+				<p>Evaluate the logarithmic expression: \(log_3 72 - log_3 8\).</p>
+				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
+					1
+				</button>
+				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
+					2
+				</button>
+				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+					3
+				</button>
+				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
+					4
+				</button>
+				<p id="feedback">Choose an answer to see your feedback.</p>
+			</div>
+		</div>
+		<script>
+			let correctAnswer = 1;
+			let feedback = [
+				"Not quite. Try checking your work.",
+				"That is correct!",
+				"Not quite. Try checking your work.",
+				"Not quite. Try checking your work.",
+			];
+			let feedbackDiv = document.getElementById("feedback");
+			let buttons = {
+				button0: document.getElementById("button0"),
+				button1: document.getElementById("button1"),
+				button2: document.getElementById("button2"),
+				button3: document.getElementById("button3"),
+			};
+			evaluateAnswer = (num) => {
+				buttons.button0.style.borderColor = "lightgray";
+				buttons.button1.style.borderColor = "lightgray";
+				buttons.button2.style.borderColor = "lightgray";
+				buttons.button3.style.borderColor = "lightgray";
+				feedbackDiv.innerHTML = feedback[num];
+				if (num === correctAnswer) {
+					buttons["button" + num].style.borderColor = "#34c8b6";
+					console.log("correct!");
+				} else {
+					buttons["button" + num].style.borderColor = "#ea3323";
+					console.log("incorrect!");
+				}
+			};
+		</script>
 		<script
 			id="MathJax-script"
 			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"

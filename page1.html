@@ -93,65 +93,80 @@
 		<p>Think you've got it? Here's some examples.</p>
 		<h1 class="title">Logarithm Examples</h1>
 		<p>Evaluate \(x\) for each of these equations</p>
-		<p class="importantInformation">
-			\(\log 10 = x\)
+		<p class="importantInformation">\(\log 10 = x\)</p>
+		<p>
+			Remember! This is equivalent to the following: \(\log_{10} 10 = x\) What
+			power do we raise 10 to to get 10? 1 of course! Therefore, \(x=1\)
 		</p>
-		<p>Remember! This is equivalent to the following: \(\log_{10} 10 = x\) What power do we raise 10 to to get 10? 1 of course! Therefore, \(x=1\) </p>
-		<p class="importantInformation">
-			\(\log_{2}16 = x\)
+		<p class="importantInformation">\(\log_{2}16 = x\)</p>
+		<p>
+			Let's turn this into a format that we are used to: \(2^x = 16\). From
+			this, we can easily see that x is 4.
 		</p>
-		<p>Let's turn this into a format that we are used to: \(2^x = 16\). From this, we can easily see that x is 4.</p>
-		<p class="importantInformation">
-			\(\log_{1 \over 2}16 = x\)
+		<p class="importantInformation">\(\log_{1 \over 2}16 = x\)</p>
+		<p>
+			This is a little bit more tricky. Again, turn it into an exponential
+			format: \({1 \over 2}^x = 16\). Now we can see that \(x=-4\), as we can
+			get \({1 \over 2}^4 = {1 \over 16}\), and the negative bit takes the
+			reciprocal, giving us 16.
 		</p>
-		<p>This is a little bit more tricky. Again, turn it into an exponential format: \({1 \over 2}^x = 16\). Now we can see that \(x=-4\), as we can get \({1 \over 2}^4 = {1 \over 16}\), and the negative bit takes the reciprocal, giving us 16.</p>
 		<div class="centered">
 			<div class="quiz">
 				<h1 class="title">Quiz</h1>
-				<p>Evaluate the logarithm: \(log_{6} 216\). Try this without the calculator above first!</p>
-				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">2</button>
-				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">3</button>
-				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">6</button>
-				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">36</button>
+				<p>
+					Evaluate the logarithm: \(log_{6} 216\). Try this without the
+					calculator above first!
+				</p>
+				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
+					2
+				</button>
+				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
+					3
+				</button>
+				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+					6
+				</button>
+				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
+					36
+				</button>
 				<p id="feedback">Choose an answer to see your feedback.</p>
 			</div>
-			<script>
-				let correctAnswer = 1;
-				let feedback = [
-					"That is incorrect but very close! Try again.",
-					"That is correct!",
-					"That is incorrect. Try converting to an exponential expression to see more clearly!",
-					"That is incorrect. Logarithms aren't division! Try again."
-				]
-				let feedbackDiv = document.getElementById("feedback")
-				let buttons = {
-					button0: document.getElementById("button0"),
-					button1: document.getElementById("button1"),
-					button2: document.getElementById("button2"),
-					button3: document.getElementById("button3"),
-				}
-				evaluateAnswer = (num) => {
-					buttons.button0.style.borderColor = "lightgray"
-					buttons.button1.style.borderColor = "lightgray"
-					buttons.button2.style.borderColor = "lightgray"
-					buttons.button3.style.borderColor = "lightgray"
-					feedbackDiv.innerHTML = feedback[num]
-					if (num === correctAnswer) {
-						buttons["button" + num].style.borderColor = "#34c8b6"
-						console.log("correct!")
-					}else{
-						buttons["button" + num].style.borderColor = "#ea3323"
-						console.log("incorrect!")
-					}
-
-				}
-			</script>
 		</div>
+		<script>
+			let correctAnswer = 1;
+			let feedback = [
+				"That is incorrect but very close! Try again.",
+				"That is correct!",
+				"That is incorrect. Try converting to an exponential expression to see more clearly!",
+				"That is incorrect. Logarithms aren't division! Try again.",
+			];
+			let feedbackDiv = document.getElementById("feedback");
+			let buttons = {
+				button0: document.getElementById("button0"),
+				button1: document.getElementById("button1"),
+				button2: document.getElementById("button2"),
+				button3: document.getElementById("button3"),
+			};
+			evaluateAnswer = (num) => {
+				buttons.button0.style.borderColor = "lightgray";
+				buttons.button1.style.borderColor = "lightgray";
+				buttons.button2.style.borderColor = "lightgray";
+				buttons.button3.style.borderColor = "lightgray";
+				feedbackDiv.innerHTML = feedback[num];
+				if (num === correctAnswer) {
+					buttons["button" + num].style.borderColor = "#34c8b6";
+					console.log("correct!");
+				} else {
+					buttons["button" + num].style.borderColor = "#ea3323";
+					console.log("incorrect!");
+				}
+			};
+		</script>
 		<script
 			id="MathJax-script"
 			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 		></script>
-		
+
 		<script>
 			function typeset(code) {
 				MathJax.startup.promise = MathJax.startup.promise
@@ -166,26 +181,31 @@
 			let updateLog = () => {
 				let solution = document.getElementById("logAnswer");
 				let log =
-					Math.log((isNaN(argument.value) || argument.value === ""  ? 10 : argument.value)) /
-					Math.log((isNaN(base.value) || base.value === ""  ? 10 : base.value));
+					Math.log(
+						isNaN(argument.value) || argument.value === "" ? 10 : argument.value
+					) /
+					Math.log(isNaN(base.value) || base.value === "" ? 10 : base.value);
 				console.log(isNaN(base.value) || base.value === "" ? 10 : base.value);
-				let rounded = Math.round(log * 1000)/1000
-				let sign = "="
+				let rounded = Math.round(log * 1000) / 1000;
+				let sign = "=";
 				if (log !== rounded) {
-					sign = "&asymp;"
+					sign = "&asymp;";
 				}
 				solution.innerHTML =
 					"$$\\log_{" +
-					(isNaN(base.value) || base.value === ""  ? 10 : base.value) +
+					(isNaN(base.value) || base.value === "" ? 10 : base.value) +
 					"}" +
-					(isNaN(argument.value) || argument.value === ""  ? 10 : argument.value) +
-					 sign + "{" +
+					(isNaN(argument.value) || argument.value === ""
+						? 10
+						: argument.value) +
+					sign +
+					"{" +
 					rounded +
 					"}$$";
 				MathJax.typeset();
 			};
 
-			updateLog()
+			updateLog();
 		</script>
 	</body>
 </html>
