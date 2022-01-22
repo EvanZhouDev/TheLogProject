@@ -12,11 +12,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="page.css" />
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-		<script
-			id="MathJax-script"
-			async
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-		></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -25,6 +20,66 @@
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
-		<p>When \(ax^2 \ne 2\)</p>
+
+		<h1 class="title">Euler's Number and Natural Logarithms</h1>
+		<p>
+			Euler's number is an irrational constant similar to the trusty value
+			\(\pi\) (pi). Its value is approximated to be
+			\(2.7182818284590452353602874713527\). The actual number itself appears in
+			nature many times, and is sometimes categorized with exponential growth.
+			However, Euler's number is also used when taking when taking a logarithm
+			with base \(e\). As with all important expressions, \(\log_e x\) has been
+			abstracted and given its own name: The natural logarithm, or \(\ln x\).
+		</p>
+		<p class="importantInformation">\(\log_e x = \ln x\)</p>
+		<p>
+			When you are expressing a natural logarithm, you do not provide the
+			base&mdash;it is always \(e\). Here is a visualization of the graph of
+			\(f(x)=\ln x\)
+			<br />
+		</p>
+
+		<div id="quadratic"></div>
+		<div style="margin-left: 40px">
+			<i>
+				Hold down mouse to move graph. <br />
+				Pinch with two fingers to zoom. <br />
+				Hover to see \((x,y)\) pairs
+			</i>
+		</div>
+
+		<h1 class="title">Euler's Number and Logarithms</h1>
+		<p>Evaluate these logarithms. Do not round:</p>
+		<p class="importantInformation">\(e^{ln 4}\)</p>
+		<p>
+			When looking at these numbers, you might think "If \(e\) is irrational, then how do I <i>evaluate without rounding?</i>" This is the time to employ our logarithm properties that we learned a while back. We can use the inverse property to simplify this. Let's rewrite the problem slightly: \(e^{log_e 4}\). Do you see how we can cancel? The \(e\) and the logarithm of base \(e\) cancel to just leave 4. the answer would be 4.
+		</p>
+		<p class="importantInformation">\(\ln e^{100}\)</p>
+		<p>
+			Similarly with this problem, we can use the inverse property to simplify. Let's rewrite again: \(\log_e e^{100}\). The logarithm of base \(e\) and the \(e\) itself cancel out, leaving our answer, \(100\).
+		</p>
+		<p class="importantInformation">
+			\({\ln 8 \over \ln 2}\)
+		</p>
+		<p>
+			Keeping in mind that the natural logarithm is just a logarithm of base \(e\), the Change of Base formula comes in handy here. We can rewrite this as \({\log_e 8 \over \log_e 2}\), or \(log_2 8\). When we evaluate, we get the answer, 3.
+		</p>
+		<script
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		></script>
+		<script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+		<script async defer>
+			console.log(functionPlot);
+			functionPlot({
+				target: "#quadratic",
+				grid: "true",
+				data: [
+					{
+						fn: "log(x)",
+					},
+				],
+			});
+		</script>
 	</body>
 </html>
