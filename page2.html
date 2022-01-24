@@ -20,90 +20,125 @@
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
-
-		<h1 class="title">Product Property of Logarithms</h1>
+		<h1 class="title">What are Logarithms?</h1>
 		<p>
-			As with all mathematical concepts, logarithms have different properties.
-			The first of these that we will be discussing is the product property.
-			Let's take a look at how the HMH textbook defines this property.
+			The definition of a logarithm is defined as follows in the HMH textbook:
 		</p>
 		<p class="importantInformation">
-			The logarithm of a product is equal to the sum of the logarithm of its
-			factors
+			The exponent that a specified base must be raised to in order to get a
+			certain value
+		</p>
+		<p>You will commonly see logarithms denoted like this:</p>
+		<p class="importantInformation">\(\log_b a\)</p>
+		<p>
+			The subscript \(b\) is the <i>base</i>, and we read this as "log base b of
+			y"
 		</p>
 		<p>
-			This might seem slightly confusing. However, we can break this down.
-			Imagine that we have a logarithmic equation like this \(\log_2 15\). The
-			sum of the logarithms of 15's factors is equal to \(log_2 15\). First,
-			find two factors: We will be choosing 5 and 3, but 1 and 15 work equally
-			as fine. Now, we will add the logarithm of both of these factors, with the
-			same base as the original logarithm, 2. It should look something as
-			follows: \(\log_2 5 + log_2 3\).<br />Referring back to the definition,
-			adding these two should, in theory, equal \(\log_2 15\). Does this work?
-			Let's plug it into a calculator to check. \(log_2 15 &asymp; 3.907\), and
-			\(\log_2 5 + log_2 3 &asymp; 3.907\) as well! Similarly, we can turn
-			\(\log_2 5 + log_2 3\) back into \(\log_2 15\).
+			However, what does this function mean?<br />
+			Assume that you have a logarithmic expression like this: \(\log_2 8\), and
+			are asked to evaluate it.
 		</p>
-		<br />
 		<p>
-			Now, let's perform the usual mathematic abstraction. We get the following
-			equation.
+			According to HMH definition, we have to find the number that the base, 2,
+			needs to be raised to in order to achieve the number 8.
+		</p>
+		<p>
+			This is equal to three, because \(2^3\) is equal to 8. In other words,
+			\(\log_2 8 = x\)&nbsp;&nbsp;<i>if and only if</i>&nbsp;&nbsp;\(2^x = 8\).
+			Now, if we were to abstract this, we get the golden rule of logarithms:
 		</p>
 		<p class="importantInformation">
-			For any positive numbers \(m\), \(n\), and \(b\) (\(b \ne 1\)), \(\log_b
-			mn = log_b m+log_b n\)
+			\(\log_b a = x\)&nbsp;&nbsp;<i>if and only if</i>&nbsp;&nbsp;\(b^x = a\)
 		</p>
-
-		<h1 class="title">Product Property Examples</h1>
-		<p>Simplify this equation:</p>
-		<p class="importantInformation">\(log_{216} 12 + log_{216} 18\)</p>
 		<p>
-			From what we've learned, the logarithm of a product is equal to the sum of
-			the logarithm of its factors. We converted one logarithm to multiple.
-			However, let's undo this process. The two factors, instead, are 12 and 18.
-			We can multiply them to get this: \(log_{216}(12*18)\), or simplified:
-			\(log_{216} 216\). We can tell that this is, in fact, 1!
+			You may also see the logarithm function defined without a base. You can
+			assume that this means that the base is 10. Putting this into practice,
+			\(\log 100 = log_{10} 100\). Logarithms can sometimes be evaluated by
+			hand, but more complex equations may be evaluated by a scientific or
+			graphing calculator.
 		</p>
-		<p>Represent the following equations in <i>1</i> logarithm:</p>
-		<p class="importantInformation">\(log 3 + log 5\)</p>
 		<p>
-			This is very similar to what we had in the previous example. Let's
-			multiply the 3 and 5 together: \(log (3 * 5)\). Simplify: \(log 15\). And
-			there we have it!
+			Try logarithms out! Play around with the calculator below to calculate
+			some logarithms!
 		</p>
-		<p class="importantInformation">\(log 2 + log 4 + log 6\)</p>
+		<div class="importantInformation calculator">
+			<h3 id="logAnswer">$$\\log_b a = {?}$$</h3>
+			<br />
+			<div class="inputGroup">
+				b:
+				<input
+					class="numberInput"
+					type="number"
+					id="base"
+					name="base"
+					placeholder="10"
+				/>
+			</div>
+			<br />
+			<div class="inputGroup">
+				a:
+				<input
+					class="numberInput"
+					type="number"
+					id="argument"
+					name="argument"
+					placeholder="10"
+				/>
+			</div>
+			<br />
+			<br />
+			<button class="submitButton" onclick="updateLog()">Evaluate</button>
+		</div>
+		<p>Think you've got it? Here's some examples.</p>
+		<h1 class="title">Logarithm Examples</h1>
+		<p>Evaluate \(x\) for each of these equations</p>
+		<p class="importantInformation">\(\log 10 = x\)</p>
 		<p>
-			This looks slightly different, doesn't it? However, let's do this part by
-			part. First, we will simplify the logarithm of 2 and 4. We follow the
-			steps above to get \(log 8 + log 6\). Next, we do the same thing with the
-			8 and the 6. The answer is \(log 48\).
+			Remember! This is equivalent to the following: \(\log_{10} 10 = x\) What
+			power do we raise 10 to to get 10? 1 of course! Therefore, \(x=1\)
+		</p>
+		<p class="importantInformation">\(\log_{2}16 = x\)</p>
+		<p>
+			Let's turn this into a format that we are used to: \(2^x = 16\). From
+			this, we can easily see that x is 4.
+		</p>
+		<p class="importantInformation">\(\log_{1 \over 2}16 = x\)</p>
+		<p>
+			This is a little bit more tricky. Again, turn it into an exponential
+			format: \({1 \over 2}^x = 16\). Now we can see that \(x=-4\), as we can
+			get \({1 \over 2}^4 = {1 \over 16}\), and the negative bit takes the
+			reciprocal, giving us 16.
 		</p>
 		<div class="centered">
 			<div class="quiz">
 				<h1 class="title">Quiz</h1>
-				<p>Evaluate the logarithmic expression: \(log_6 3 + log_6 72\).</p>
+				<p>
+					Evaluate the logarithm: \(log_{6} 216\). Try this without the
+					calculator above first!
+				</p>
 				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
-					1
-				</button>
-				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
 					2
 				</button>
-				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
 					3
 				</button>
+				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+					6
+				</button>
 				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
-					4
+					36
 				</button>
 				<p id="feedback">Choose an answer to see your feedback.</p>
 			</div>
 		</div>
 		<script>
-			let correctAnswer = 2;
+			let correctAnswer = 1;
 			let feedback = [
-				"Not quite. Try checking your work.",
-				"Not quite. Try checking your work.",
+				"That is incorrect but very close! Try again.",
 				"That is correct!",
-				"Not quite. Try checking your work.",
+				"That is incorrect. Try converting to an exponential expression to see more clearly!",
+				"That is incorrect. Logarithms aren't division! Try again.",
 			];
 			let feedbackDiv = document.getElementById("feedback");
 			let buttons = {
@@ -131,5 +166,46 @@
 			id="MathJax-script"
 			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 		></script>
+
+		<script>
+			function typeset(code) {
+				MathJax.startup.promise = MathJax.startup.promise
+					.then(() => MathJax.typesetPromise(code()))
+					.catch((err) => console.log("Typeset failed: " + err.message));
+				return MathJax.startup.promise;
+			}
+
+			let base = document.getElementById("base");
+			let argument = document.getElementById("argument");
+
+			let updateLog = () => {
+				let solution = document.getElementById("logAnswer");
+				let log =
+					Math.log(
+						isNaN(argument.value) || argument.value === "" ? 10 : argument.value
+					) /
+					Math.log(isNaN(base.value) || base.value === "" ? 10 : base.value);
+				console.log(isNaN(base.value) || base.value === "" ? 10 : base.value);
+				let rounded = Math.round(log * 1000) / 1000;
+				let sign = "=";
+				if (log !== rounded) {
+					sign = "&asymp;";
+				}
+				solution.innerHTML =
+					"$$\\log_{" +
+					(isNaN(base.value) || base.value === "" ? 10 : base.value) +
+					"}" +
+					(isNaN(argument.value) || argument.value === ""
+						? 10
+						: argument.value) +
+					sign +
+					"{" +
+					rounded +
+					"}$$";
+				MathJax.typeset();
+			};
+
+			updateLog();
+		</script>
 	</body>
 </html>

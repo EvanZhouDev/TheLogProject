@@ -1,12 +1,18 @@
-let debug = false;
+let debug = true;
 
 let pageNum = 0
 let pages = {
+	page1: {
+		type: "page",
+		element: undefined,
+		learned: false,
+		title: "The Log Project",
+	},
 	section: {
 		type: "divider",
 		title: "The Basics",
 	},
-	page1: {
+	page2: {
 		type: "page",
 		element: undefined,
 		learned: false,
@@ -16,25 +22,25 @@ let pages = {
 		type: "divider",
 		title: "Properties of Logarithms",
 	},
-	page2: {
+	page3: {
 		type: "page",
 		element: undefined,
 		learned: false,
 		title: "Product Property",
 	},
-	page3: {
+	page4: {
 		type: "page",
 		element: undefined,
 		learned: false,
 		title: "Quotient Property",
 	},
-	page4: {
+	page5: {
 		type: "page",
 		element: undefined,
 		learned: false,
 		title: "Power Property",
 	},
-	page5: {
+	page6: {
 		type: "page",
 		element: undefined,
 		learned: false,
@@ -44,13 +50,13 @@ let pages = {
 		type: "divider",
 		title: "More about log()",
 	},
-	page6: {
+	page7: {
 		type: "page",
 		element: undefined,
 		learned: false,
 		title: "Change of Base",
 	},
-	page7: {
+	page8: {
 		type: "page",
 		element: undefined,
 		learned: false,

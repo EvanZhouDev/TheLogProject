@@ -21,87 +21,79 @@
 			</p>
 		<![endif]-->
 
-		<h1 class="title">Applying the Change of Base Formula</h1>
+		<h1 class="title">Inverse Properties of Logarithms and Exponents</h1>
 		<p>
-			You might realize that many logarithms that we evaluated required a base
-			value. For example, \(log_2 4\) has a base of 2. However, on many
-			scientific/graphing calculators, there are no inputs for a base. There is
-			simply a \(\log\) button, and an \(\ln\) button (we'll get to natural
-			logarithms in the next lesson). So, what do we do to get bases for our
-			logarithms? We have to use the Change of Base Formula. The HMH textbook
-			defines it as so:
+			This property is slightly different from the previous properties that were
+			explained. Instead of the usual logarithm manipulation, the Inverse
+			Property of Logarithms and Exponents (as its name states!) is a way to
+			cancel out logarithms and exponent using inverses. Let's see what HMH has
+			to say about this property.
 		</p>
 		<p class="importantInformation">
-			For \(a > 0\) and \(a \ne 1\) and any base \(b\) such that \(b>0\) and \(b
-			\ne 1\), <br />
-			\(\log_b x = {\log_a x \over \log_a b}\)
+			For any base \(b\) such that \(b>0\) and \(b \ne 1\),<br />\(\log_b b^{x}
+			= x\), and \(b^{\log_{b} x} = x\)
 		</p>
 		<p>
-			As you can see, to turn a logarithm with a base into two logarithms with
-			<i>any</i> base, i.e., the variable \(a\) can be anything. Let's see this
-			in action. Using the logarithm with a base, \(log_{134} 763\), we'll apply
-			the Change of Base Formula. We first figure out that our \(b\) value is
-			134&mdash;our base is 134. Next, we see that \(x\) is 763&mdash;our
-			argument is 763. Format the variables like so: \({\log_a 763 \over \log_a
-			134}\). Notice how we explicitly left the variable \(a\) blank. It can be
-			anything, as long as it follows these rules: \(a > 0\) and \(a \ne 1\).
-			Let's try evaluating the original logarithm first. Using the calculator in
-			the first lesson, we get this: \(log_{134} 763 &approx; 1.355\). Now,
-			let's assume that \(a = 10\), and evaluate the expression after we
-			converted it: \({\log_{10} 763 \over \log_{10} 134} &approx; 1.355\) as
-			well! To show that \(a\) can be something else, let's give it the value of
-			102. Does it work? \({\log_{102} 763 \over \log_{102} 134} &approx;
-			1.355\) Indeed it does! We can also use the property in reverse. When we
-			see a quotient of two logarithms of a common base, we can turn them into a
-			single logarithm, with the argument the top logarithm, and the base the
-			lower logarithm.
+			As you can see, the definition of this property is quite simple. When you
+			recognize any of these cases when you are problem-solving, you should know
+			that you can cancel out a part of the expression. "Canceling out" is a
+			fancy way to say remove two inverses. For example, in \(1 - 1 + 2\), we
+			can cancel out the ones (as they invert each other), and just leave a 2.
+			Similarly with exponents, in \(\log_5 5^2\), the logarithm with base 5 and
+			the 5 itself cancel, leaving just the exponent, 2. Something to pay
+			attention to is that when you can cancel, there are usually two of the
+			same numbers. When you see this happen along with logarithms and
+			exponents, keep a sharp eye out for the ability to apply the Inverse
+			Properties of Logarithms and Exponents!
 		</p>
 
-		<h1 class="title">Change of Base Examples</h1>
-		<p>Represent this expression with only base 10 logarithms:</p>
-		<p class="importantInformation">\(\log_2 12\)</p>
+		<h1 class="title">Inverse Property Examples</h1>
+		<p>Simplify this expression:</p>
+		<p class="importantInformation">\(\log 10^{x}\)</p>
 		<p>
-			Directly applying the Change of Base formula is enough in this situation.
-			Because we need a final logarithm of base 10, we can make the \(a\) value
-			in the original definition 10. We will get something like this:
-			\({\log_{10} 12 \over \log_{10} 2}\), or simply \({\log 12 \over \log 2}\)
+			You might not think that the inverse property is at all applicable here;
+			it appears that there are no two same terms. However, remember that the
+			given expression is equivalent to this: \(\log_{10} 10^{x}\). Now, we see
+			that the two 10's may cancel out, to leave us with just the answer: \(x\).
 		</p>
-		<p class="importantInformation">\(log_4 12 + log_4 9\)</p>
+		<p class="importantInformation">\(6^{log_6 7}\)</p>
 		<p>
-			To achieve the simplest form, we first have to multiply the two values
-			with the product property. We get \(log_4 108\). Then, with the Change of
-			Base formula, (and again, making \(a\) 10) we get \({\log_{10} 108 \over
-			\log_{10} 4}\), or \({\log 108 \over \log 4}\)
+			This one is slightly more obvious, as the 6 to the power of the logarithm
+			of base 6 cancel out, leaving simply 7. The answer is \(7\).
 		</p>
-		<p>Are the two expressions equivalent? Explain.</p>
-		<p class="importantInformation">
-			\({\log_{2} 97 \over \log_{2} 3}\) and \({\log_{13} 97 \over \log_{13}
-			3}\)
-		</p>
+		<p>Evaluate this expression using the Inverse Property:</p>
+		<p class="importantInformation">\(log_4 256\)</p>
 		<p>
-			These two values would be completely equal! If we reverse the Change of
-			Base formula (changing a quotient of two logarithms with identical bases
-			into one logarithm with a unique base), we can turn \({\log_{2} 97 \over
-			\log_{2} 3}\) back into \(\log_3 97\). From that, we can use the same
-			formula to get \({\log_{13} 97 \over \log_{13} 3}\). Applying the
-			transitive property, \({\log_{2} 97 \over \log_{2} 3}\) and \({\log_{13}
-			97 \over \log_{13} 3}\) are completely equal!
+			We may notice that the latter 256 is equivalent to \(4 * 4 * 4 * 4\), or
+			\(4^4\). Writing this into the expression, we get \(log_4 4^4\). What do
+			we notice? We see that the logarithm's base (4) and the four itself
+			cancel, leaving the exponent behind. We get that \(log_4 4^4 = 4\). The
+			answer is \(4\).
+		</p>
+		<p>Solve for \(x\):</p>
+		<p class="importantInformation">\(\log_8 8^x = log 100\)</p>
+		<p>
+			This is a simple equation, where we have to solve for \(x\). First, we
+			notice that on the left side, the logarithm of base 8 and 8 cancels,
+			leaving \(x\). Now, we solve the logarithm on the left-hand side, getting
+			2. (\(log 100 = 2\)) Finally, we get \(x = 2\), meaning that the final
+			answer is \(2\).
 		</p>
 		<div class="centered">
 			<div class="quiz">
 				<h1 class="title">Quiz</h1>
-				<p>What is this equivalent to?: \({\log_x 10 \over log_x 3}\).</p>
+				<p>Evaluate this logarithm: \(\log_a a^{14}\).</p>
 				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
-					\(\log_3 10\)
+					\(14\)
 				</button>
 				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
-					\(\log_{10} 3\)
+					\(a\)
 				</button>
 				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
-					\(\log_x 10\)
+					\(14a\)
 				</button>
 				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
-					\(\log_x 3\)
+					\(1\)
 				</button>
 				<p id="feedback">Choose an answer to see your feedback.</p>
 			</div>

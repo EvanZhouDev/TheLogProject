@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="page.css" />
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="#">upgrade your browser</a> to improve your experience.
+			</p>
+		<![endif]-->
+
+		<h1 class="title">Euler's Number and Natural Logarithms</h1>
+		<p>
+			Euler's number is an irrational constant similar to the trusty value
+			\(\pi\) (pi). Its value is approximated to be \(2.71828\). The actual
+			number itself appears in nature many times, and is sometimes categorized
+			with exponential growth. However, Euler's number is also used when taking
+			when taking a logarithm with base \(e\). As with all important
+			expressions, \(\log_e x\) has been abstracted and given its own name: The
+			natural logarithm, or \(\ln x\).
+		</p>
+		<p class="importantInformation">\(\log_e x = \ln x\)</p>
+		<p>
+			When you are expressing a natural logarithm, you do not provide the
+			base&mdash;it is always \(e\). Here is a visualization of the graph of
+			\(f(x)=\ln x\)
+			<br />
+		</p>
+
+		<div id="quadratic"></div>
+		<div style="margin-left: 40px">
+			<i>
+				Hold down mouse to move graph. <br />
+				Pinch with two fingers to zoom. <br />
+				Hover to see \((x,y)\) pairs
+			</i>
+		</div>
+
+		<h1 class="title">Euler's Number and Logarithms</h1>
+		<p>Evaluate these logarithms. Do not round:</p>
+		<p class="importantInformation">\(e^{ln 4}\)</p>
+		<p>
+			When looking at these numbers, you might think "If \(e\) is irrational,
+			then how do I <i>evaluate without rounding?</i>" This is the time to
+			employ our logarithm properties that we learned a while back. We can use
+			the inverse property to simplify this. Let's rewrite the problem slightly:
+			\(e^{log_e 4}\). Do you see how we can cancel? The \(e\) and the logarithm
+			of base \(e\) cancel to just leave 4. the answer would be 4.
+		</p>
+		<p class="importantInformation">\(\ln e^{100}\)</p>
+		<p>
+			Similarly with this problem, we can use the inverse property to simplify.
+			Let's rewrite again: \(\log_e e^{100}\). The logarithm of base \(e\) and
+			the \(e\) itself cancel out, leaving our answer, \(100\).
+		</p>
+		<p class="importantInformation">\({\ln 8 \over \ln 2}\)</p>
+		<p>
+			Keeping in mind that the natural logarithm is just a logarithm of base
+			\(e\), the Change of Base formula comes in handy here. We can rewrite this
+			as \({\log_e 8 \over \log_e 2}\), or \(log_2 8\). When we evaluate, we get
+			the answer, 3.
+		</p>
+		<div class="centered">
+			<div class="quiz">
+				<h1 class="title">Quiz</h1>
+				<p>Evaluate: \(\log_e e\).</p>
+				<button id="button0" class="quizButton" onclick="evaluateAnswer(0)">
+					\(1\)
+				</button>
+				<button id="button1" class="quizButton" onclick="evaluateAnswer(1)">
+					\(e\)
+				</button>
+				<button id="button2" class="quizButton" onclick="evaluateAnswer(2)">
+					\(e^2\)
+				</button>
+				<button id="button3" class="quizButton" onclick="evaluateAnswer(3)">
+					\(2e\)
+				</button>
+				<p id="feedback">Choose an answer to see your feedback.</p>
+			</div>
+		</div>
+		<script>
+			let correctAnswer = 0;
+			let feedback = [
+				"That is correct!",
+				"Not quite. Try checking your work.",
+				"Not quite. Try checking your work.",
+				"Not quite. Try checking your work.",
+			];
+			let feedbackDiv = document.getElementById("feedback");
+			let buttons = {
+				button0: document.getElementById("button0"),
+				button1: document.getElementById("button1"),
+				button2: document.getElementById("button2"),
+				button3: document.getElementById("button3"),
+			};
+			evaluateAnswer = (num) => {
+				buttons.button0.style.borderColor = "lightgray";
+				buttons.button1.style.borderColor = "lightgray";
+				buttons.button2.style.borderColor = "lightgray";
+				buttons.button3.style.borderColor = "lightgray";
+				feedbackDiv.innerHTML = feedback[num];
+				if (num === correctAnswer) {
+					buttons["button" + num].style.borderColor = "#34c8b6";
+					console.log("correct!");
+				} else {
+					buttons["button" + num].style.borderColor = "#ea3323";
+					console.log("incorrect!");
+				}
+			};
+		</script>
+		<script
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		></script>
+		<script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+		<script async defer>
+			functionPlot({
+				target: "#quadratic",
+				grid: "true",
+				data: [
+					{
+						fn: "log(x)",
+					},
+				],
+			});
+		</script>
+	</body>
+</html>
