@@ -166,3 +166,12 @@ iframe {
 .helpButton:active {
 	border-radius: 10px;
 }
+
+.githubLink {
+	position: absolute;
+	right: 1%;
+	bottom: 2%;
+	font-family: "Roboto", sans-serif;
+	font-size: 30px;
+	color: black;
+}
