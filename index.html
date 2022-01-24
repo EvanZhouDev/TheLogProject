@@ -37,10 +37,19 @@
 		<div id="iframes">
 			<!-- This area is dynamically populated -->
 		</div>
+		<a id="githubLinkTutorial" class="githubLink" href="https://github.com/EvanZhouDev/TheLogProject">
+			<img
+			src="Assets/GitHub-Mark.png"
+			alt="HTML tutorial"
+			style="width: 100px; height: 100px"
+			/>
+		</a>
 
 		<div id="tutorialSideBar" class="sideBar">
 			<div class="sideBarTitle">Menu</div>
-			<button onclick="userGuide()" id="tutorialHelpButton" class="helpButton">?</button>
+			<button onclick="userGuide()" id="tutorialHelpButton" class="helpButton">
+				?
+			</button>
 			<div class="sideBarDivSections" id="menu">
 				<!-- This area is dynamically populated -->
 			</div>
@@ -79,7 +88,8 @@
 									"Click on any of these to change your lesson. Give it a try!",
 							},
 							{
-								intro: "Each of the lessons will have interactive elements such as calculators and quizzes. Practice logarithms with The Log Project!",
+								intro:
+									"Each of the lessons will have interactive elements such as calculators and quizzes. Practice logarithms with The Log Project!",
 							},
 							{
 								element: document.getElementById("tutorialButtons"),
@@ -90,6 +100,10 @@
 								element: document.getElementById("markDoneButton"),
 								intro:
 									"Use this button to mark your lesson as done. Finished lessons will have a green circle next to them. Click it again to mark as unlearned.",
+							},
+							{
+								element: document.getElementById("githubLinkTutorial"),
+								intro: "Click this button here at any time to view the Github Repository powering The Log Project."
 							},
 							{
 								element: document.getElementById("tutorialHelpButton"),
@@ -104,10 +118,10 @@
 					})
 					.start();
 			};
-			let userVisited = localStorage.getItem("theLogProjectVisited")
+			let userVisited = localStorage.getItem("theLogProjectVisited");
 
 			if (userVisited == undefined) {
-				localStorage.setItem("theLogProjectVisited", "true")
+				localStorage.setItem("theLogProjectVisited", "true");
 				userGuide();
 			}
 		</script>
