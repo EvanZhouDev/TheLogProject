@@ -1,4 +1,4 @@
-let debug = true;
+let debug = false;
 
 let pageNum = 0
 let pages = {
