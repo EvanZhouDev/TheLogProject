@@ -169,9 +169,10 @@ iframe {
 
 .githubLink {
 	position: absolute;
-	right: 1%;
+	right: 2%;
 	bottom: 2%;
 	font-family: "Roboto", sans-serif;
 	font-size: 30px;
 	color: black;
+	opacity: 0.5;
 }
